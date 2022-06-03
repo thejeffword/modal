@@ -59,8 +59,6 @@ button:hover {
 
 .init-btn {
     background-color: black;
-    display: flex;
-    align-content: center;
 }
 
 .init-btn:hover {
