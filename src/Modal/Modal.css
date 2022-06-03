@@ -8,6 +8,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-style: outset;
+    opacity: 0;
+    transition: all 0.3s eas-in-out;
+    pointer-events: none;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: visible;
 }
 
 .modal-header {
@@ -20,15 +29,46 @@
 
 .modal-body {
     padding: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-style: inset;
+    border-radius: 5px;
 }
 
 .modal-content {
     width: 50%;
     background-color: white;
+    color: rgb(58, 58, 58);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+    transform: translateY(-300px);
+    transition: all 0.3s ease-in-out;
 }
 
 button {
+    padding: 5px 30px;
     margin: 5px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: gray;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(87, 82, 82);
+}
+
+.init-btn {
+    background-color: black;
+    display: flex;
+    align-content: center;
+}
+
+.init-btn:hover {
+    background-color: rgb(68, 68, 68);
+}
+
+h4 {
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
 }

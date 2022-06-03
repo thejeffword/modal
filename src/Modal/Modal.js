@@ -2,17 +2,22 @@ import React from "react";
 import "./Modal.css"
 
 const Modal = props => {
+    
     return (
-        <div className="modal">
-            <div className="modal-content">
+        <div className={`modal ${props.show ? 'show' : ''}`}
+            onClick={props.onClose}>
+            <div className="modal-content"
+                onClick={e => e.stopPropagation()}>
                 <div className="modal-header">
-                    <h4 className="modal-title">Title</h4>
+                    <h4 className="modal-title">{props.title}</h4>
                 </div>
             <div className ="modal-body">
-                    Content 
+                    {props.content} 
             </div>
             <div className="modal-footer">
-                <button className="button">Close</button>
+                <button 
+                    className="button"
+                    onClick={props.onClose}>Close</button>
             </div>
         </div>
     </div>
